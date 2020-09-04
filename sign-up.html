@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Budgetify Sign-up</title>
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="sign-up.css">
+        <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+            <header> Budgetify</header>
+            <h1>Create Account</h1>
+    
+            <form name="userDetails" method="POST" action="" >
+                <div class="container">
+                    <div class="row">
+                        <div>
+                            First name <br>
+                            <input type="text" name="FirstName" id="first-name" required>
+                        </div>
+                        <div>
+                            Last Name <br>
+                            <input type="text" name="LastName" id="last-name" required>
+                        </div>
+                        <div>
+                            Email <br>
+                            <input type="email" name="userEmail" id="user-email" required>
+                        </div>
+                        <div>
+                            Password <br>
+                            <span class="pswd">
+                                <input type="password" name="userPswd" id="user-pswd" onclick="show()" required>
+                                <span toggle="#input-pwd" id="icon" class="fa fa-eye field-icon toggle-password"  onclick="myFunction()"></span>
+                            </span>
+                        </div>
+                        
+                        <p id= warning></p>
+                        <div>
+                            <input type="submit" id="sign-btn" value="Sign Up" >
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </form>
+            <div class="side">Already have an account? <a href="sign-in.html">Sign In</a></div>
+        </div>
+        <script>
+            var pswd= document.getElementById("user-pswd");
+            var icon= document.getElementById("icon");
+            function show(){
+                icon.style.visibility="visible";
+            }
+            function showagain(){
+                icon2.style.visibility="visible";
+            }
+            function myFunction(){
+                if (pswd.type=="password"){
+                    pswd.type="text";
+                    document.getElementById("icon").className=("fa fa-eye-slash");
+                }else{
+                    pswd.type="password";
+                    document.getElementById("icon").className=("fa fa-eye");
+                }
+                
+            }
+            
+        </script>
+    </body>
+</html>
